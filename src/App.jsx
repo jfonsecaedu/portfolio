@@ -73,6 +73,13 @@ function ListaDeProjetos() {
   return (
     <>
       <Projeto
+        name="Laboratório SOC com Wazuh SIEM"
+        descricao="Laboratório SOC com três VMs (Kali Linux, Ubuntu Server e Wazuh) para simulação e detecção de ataques brute force SSH. Implementei monitoramento centralizado de logs, correlação de eventos e resposta automatizada com bloqueio do IP atacante via iptables por 180 segundos."
+       img="/imgs/wazuh-soc.png"
+       tags={["Wazuh", "SIEM", "Blue Team", "Active Response", "Linux"]}
+       github="https://github.com/jfonsecaedu/soc-home-lab-wazuh"
+      />
+      <Projeto
         name="Analisador de Logs (SIEM Caseiro)"
         descricao="Ferramenta em Python que lê logs de autenticação, extrai usuário e IP com regex e detecta tentativas de brute force por contagem de falhas de login por IP, listando os endereços suspeitos acima de um limite."
         img="/imgs/siem-tool.png"
