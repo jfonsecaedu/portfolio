@@ -80,18 +80,18 @@ function ListaDeProjetos() {
        github="https://github.com/jfonsecaedu/soc-home-lab-wazuh"
       />
       <Projeto
-        name="Analisador de Logs (SIEM Caseiro)"
-        descricao="Ferramenta em Python que lê logs de autenticação, extrai usuário e IP com regex e detecta tentativas de brute force por contagem de falhas de login por IP, listando os endereços suspeitos acima de um limite."
-        img="/imgs/siem-tool.png"
-        tags={["Python", "Regex", "Blue Team", "Logs"]}
-        github="https://github.com/jfonsecaedu/siem.tool"
-      />
-      <Projeto
         name="Classificador com SVM (Amadey)"
         descricao="Classificador de malware baseado em SVM treinado com a família Amadey. Features extraídas por análise estática, normalização Min-Max e validação cruzada 10-fold, com 96,56% de acurácia de teste."
         img="/imgs/amadey-project.png"
         tags={["Machine Learning", "SVM", "Malware", "Python"]}
         github="https://github.com/jfonsecaedu/classificador-svm-amadey"
+      />
+      <Projeto
+        name="Analisador de Logs (SIEM Caseiro)"
+        descricao="Ferramenta em Python que lê logs de autenticação, extrai usuário e IP com regex e detecta tentativas de brute force por contagem de falhas de login por IP, listando os endereços suspeitos acima de um limite."
+        img="/imgs/siem-tool.png"
+        tags={["Python", "Regex", "Blue Team", "Logs"]}
+        github="https://github.com/jfonsecaedu/siem.tool"
       />
     </>
   );
