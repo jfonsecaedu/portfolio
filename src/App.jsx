@@ -53,18 +53,23 @@ const HABILIDADES = [
     ],
   },
   {
-    grupo: "Dados & ML",
-    itens: ["Pandas", "NumPy", "Scikit-learn", "SVM", "Matplotlib", "Seaborn"],
+    grupo: "Infra",
+    itens: [
+      "Manutenção de Computadores",
+      "Manutenção de Periféricos",
+      "Cabeamento de Redes",
+      "Atendimento Helpdesk",
+      "Windows & Linux",
+    ]
   },
   {
-    grupo: "Infra & Ferramentas",
+    grupo: "Ferramentas",
     itens: [
-      "Windows",
-      "Linux",
-      "Infraestrutura de Redes",
-      "Suporte Técnico / Helpdesk",
+      "Wazuh",
+      "Oracle VirtualBox",
+      "Wireshark",
+      "Visual Studio Code",
       "Git & GitHub",
-      "Máquinas Virtuais",
     ],
   },
 ];
@@ -357,14 +362,22 @@ export default function App() {
               link="https://www.credly.com/badges/1d5f2360-361a-4727-a9a2-eef70f760c4d/public_url"
             />
 
-        <Certificado
-          name="Simplify SOC Operations with Security Fabric Analytics and
-Automation r05"
-          emissor="Fortinet"
-          data="Setembro/2026"
-        />
-      </div>
-    </Secao>
+            <Certificado
+              name="Fortinet NSE 2"
+              emissor="Fortinet"
+              data="Outubro/2026"
+              img="/imgs/nse2.png"
+              link="https://www.credly.com/badges/fd6e322d-1ed8-4634-8d65-317217e7bb7f/public_url"
+            />
+            
+            <Certificado
+              name="Simplify SOC Operations with Security Fabric Analytics and Automation r05"
+              emissor="Fortinet"
+              data="Setembro/2026"
+            />
+
+          </div>
+        </Secao>
 
         {/* CONTATO */}
         <Secao id="contato" titulo="Contato">
