@@ -163,6 +163,30 @@ function Projeto({ name, descricao, img, tags = [], github, demo }) {
   );
 }
 
+function Certificado({ name, emissor, data, img, link }) {
+  const [imgOk, setImgOk] = useState(Boolean(img))
+  const Wrapper = link ? 'a' : 'div'
+  const extra = link ? { href: link, target: '_blank', rel: 'noreferrer' } : {}
+
+  return (
+    <Wrapper className="cert reveal" {...extra}>
+      <div className="cert-badge">
+        {imgOk ? (
+          <img src={img} alt={name} loading="lazy" onError={() => setImgOk(false)} />
+        ) : (
+          <ShieldIcon size={32} />
+        )}
+      </div>
+      <div className="cert-info">
+        <h3>{name}</h3>
+        <span className="cert-emissor">{emissor}</span>
+        <span className="cert-data">{data}</span>
+      </div>
+      {link && <span className="cert-seta">↗</span>}
+    </Wrapper>
+  )
+}
+
 function Secao({ id, titulo, children }) {
   return (
     <section id={id} className="secao">
@@ -263,6 +287,7 @@ export default function App() {
           <a href="#sobre">Sobre</a>
           <a href="#habilidades">Skills</a>
           <a href="#projetos">Projetos</a>
+          <a href="#certificados">Certificados</a>
           <a href="#contato">Contato</a>
         </nav>
       </header>
@@ -320,6 +345,26 @@ export default function App() {
             <ListaDeProjetos />
           </div>
         </Secao>
+
+        {/* CERTIFICADOS */}
+        <Secao id="certificados" titulo="Certificados">
+          <div className="certs-grid">
+            <Certificado
+              name="Fortinet NSE 1"
+              emissor="Fortinet"
+              data="Outubro/2026"
+              img="/imgs/nse1.png"
+              link="https://www.credly.com/badges/1d5f2360-361a-4727-a9a2-eef70f760c4d/public_url"
+            />
+
+        <Certificado
+          name="Simplify SOC Operations with Security Fabric Analytics and
+Automation r05"
+          emissor="Fortinet"
+          data="Setembro/2026"
+        />
+      </div>
+    </Secao>
 
         {/* CONTATO */}
         <Secao id="contato" titulo="Contato">
