@@ -371,8 +371,17 @@ export default function App() {
             />
             
             <Certificado
+              name="Fortinet NSE 3"
+              emissor="Fortinet"
+              data="Outubro/2026"
+              img="/imgs/nse3.png"
+              link="https://www.credly.com/badges/05ad6362-ddea-4a5c-855d-e8a93bb83389/public_url"
+            />
+
+            <Certificado
               name="Simplify SOC Operations with Security Fabric Analytics and Automation r05"
               emissor="Fortinet"
+              img="/imgs/fortinet.webp"
               data="Setembro/2026"
             />
 
